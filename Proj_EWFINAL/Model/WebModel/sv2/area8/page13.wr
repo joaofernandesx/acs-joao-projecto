@@ -1,0 +1,43 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area8#page13" name="Consulta de Documentos" landmark="true" gr:x="170" gr:y="260">
+  <ContentUnits>
+    <IndexUnit id="sv2#area8#page13#inu4" name="Documentos Pessoais" linkOrder="sv2#area8#page13#inu4#ln28 sv2#area8#page13#inu4#ln29" gr:x="0" gr:y="0" entity="ent1" displayAttributes="ent1#att3 ent1#att4 ent1#att5 ent1#att7 ent1#att8 ent1#att9 rel8#role15.ent2#att10">
+      <Link id="sv2#area8#page13#inu4#ln28" name="Editar" to="sv2#area8#page11#enu11" type="normal" validate="true">
+        <LinkParameter id="sv2#area8#page13#inu4#ln28#par72" name="keywords_keywords" source="data[].ent1#att8" target="sv2#area8#page11#enu11#fld30_slot"/>
+        <LinkParameter id="sv2#area8#page13#inu4#ln28#par73" name="path_file_path_file" source="data[].ent1#att4" target="sv2#area8#page11#enu11#fld29_slot"/>
+        <LinkParameter id="sv2#area8#page13#inu4#ln28#par74" name="public_public" source="data[].ent1#att9" target="sv2#area8#page11#enu11#fld31_slot"/>
+        <LinkParameter id="sv2#area8#page13#inu4#ln28#par75" name="titulo_titulo" source="data[].ent1#att3" target="sv2#area8#page11#enu11#fld28_slot"/>
+        <LinkParameter id="sv2#area8#page13#inu4#ln28#par76" name="idDoc_PASSING" source="data[].ent1#att1" passing="true"/>
+      </Link>
+      <Link id="sv2#area8#page13#inu4#ln29" name="Apagar" to="sv2#area8#dlu4" type="normal" automaticCoupling="true" validate="true" newWindow="false"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area8#page13#inu4">
+          <layout:Link link="sv2#area8#page13#inu4#ln28"/>
+          <layout:Link link="sv2#area8#page13#inu4#ln29"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att7"/>
+          <layout:Attribute attribute="ent1#att8"/>
+          <layout:Attribute attribute="ent1#att9"/>
+          <layout:Attribute attribute="rel8#role15.ent2#att10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

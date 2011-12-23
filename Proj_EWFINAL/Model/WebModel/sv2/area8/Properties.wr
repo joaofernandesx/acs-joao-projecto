@@ -1,0 +1,23 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2#area8" name="Gestao de Documentos" defaultPage="sv2#area8#page13" landmarks="sv2#area8#page12 sv2#area8#page13" landmark="true" gr:x="490" gr:y="0">
+  <OperationUnits>
+    <CreateUnit id="sv2#area8#cru4" name="Adicionar Documento" landmark="false" gr:x="190" gr:y="150" entity="ent1" skipBlankRecords="true" notBlankAttributes="ent1#att3 ent1#att4 ent1#att8 ent1#att9">
+      <OKLink id="sv2#area8#cru4#oln8" name="OKLink1" to="sv2#area8#page13" automaticCoupling="true"/>
+    </CreateUnit>
+    <DeleteUnit id="sv2#area8#dlu4" name="Apagar Documento" gr:x="290" gr:y="410" entity="ent1">
+      <Selector id="sv2#area8#dlu4#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area8#dlu4#su3#kcond3" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+    </DeleteUnit>
+    <ModifyUnit id="sv2#area8#mfu4" name="Gravar Alteracoes" gr:x="20" gr:y="420" entity="ent1">
+      <Selector id="sv2#area8#mfu4#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area8#mfu4#su4#kcond4" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#area8#mfu4#oln9" name="OKLink2" to="sv2#area8#page13" automaticCoupling="true" gr:bendpoints="127,-1,-52,136;119,-38,-60,99"/>
+    </ModifyUnit>
+    <GetUnit id="sv2#area8#gtu3" name="GetUtilizador" gr:x="360" gr:y="150" contextParameters="UserCtxParam">
+      <Link id="sv2#area8#gtu3#ln6" name="Link2" to="sv2#area8#cru4" type="transport" validate="true">
+        <LinkParameter id="sv2#area8#gtu3#ln6#par20" name="UserCtxParam.oid_User.oid(DocumentoToUser)" source="sv2#area8#gtu3.UserCtxParam" target="sv2#area8#cru4.rel9#role17.userOID"/>
+      </Link>
+    </GetUnit>
+  </OperationUnits>
+</Area>

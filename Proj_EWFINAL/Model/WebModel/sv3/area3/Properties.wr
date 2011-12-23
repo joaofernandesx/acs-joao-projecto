@@ -1,0 +1,22 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="300" id="sv3#area3" name="Gestao de Utilizadores" landmark="true" defaultPage="sv3#area3#page6" landmarks="sv3#area3#page6 sv3#area3#page4" layout:linkLayout="WRDefault/Simple">
+  <OperationUnits>
+    <CreateUnit gr:x="310" gr:y="30" id="sv3#area3#cru2" name="Adicionar Utilizador" entity="User">
+      <OKLink id="sv3#area3#cru2#oln3" name="OKLink3" to="sv3#area3#page6" automaticCoupling="true"/>
+      <KOLink id="sv3#area3#cru2#kln3" name="KOLink3" to="sv3#area3#page3" automaticCoupling="true" gr:bendpoints="223,0,222,-302;223,303,222,1"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="130" gr:y="330" id="sv3#area3#mfu2" name="Gravar Utilizador" entity="User">
+      <Selector id="sv3#area3#mfu2#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area3#mfu2#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#area3#mfu2#oln4" name="OKLink4" to="sv3#area3#page6" automaticCoupling="true" gr:bendpoints="104,-55,-90,112"/>
+      <KOLink id="sv3#area3#mfu2#kln1" name="KOLink1" to="sv3#area3#page3" automaticCoupling="true"/>
+    </ModifyUnit>
+    <DeleteUnit gr:x="470" gr:y="270" id="sv3#area3#dlu2" name="Apagar Utilizador" entity="User">
+      <Selector id="sv3#area3#dlu2#su2" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#area3#dlu2#su2#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#area3#dlu2#oln5" name="OKLink5" to="sv3#area3#page6" automaticCoupling="true" gr:bendpoints="-27,-107,121,20"/>
+      <KOLink id="sv3#area3#dlu2#kln2" name="KOLink2" to="sv3#area3#page3" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</Area>

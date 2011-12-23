@@ -1,0 +1,11 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1#area5" name="Autentica&#231;&#227;o" defaultPage="sv1#area5#page1" landmark="true" gr:x="530" gr:y="10" landmarks="sv1#area5#page14">
+  <OperationUnits>
+    <LoginUnit id="sv1#area5#lgu1" name="Login" gr:x="153" gr:y="8">
+      <KOLink id="sv1#area5#lgu1#kln4" name="KOLink1" to="sv1#area5#page1#enu8" gr:bendpoints="-85,17,79,11"/>
+    </LoginUnit>
+    <CreateUnit id="sv1#area5#cru5" name="InsereUser" gr:x="182" gr:y="172" entity="User">
+      <KOLink id="sv1#area5#cru5#kln5" name="KOLink2" to="sv1#area5#page14" gr:bendpoints="-101,-27,111,-24"/>
+      <OKLink id="sv1#area5#cru5#oln10" name="OKLink10" to="sv1#area5#page1" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</Area>

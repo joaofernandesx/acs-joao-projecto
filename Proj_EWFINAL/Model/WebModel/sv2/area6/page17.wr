@@ -1,0 +1,60 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area6#page17" name="Pesquisa de Documentos" landmark="true" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <EntryUnit id="sv2#area6#page17#enu9" name="search" linkOrder="sv2#area6#page17#enu9#ln35" gr:x="146" gr:y="6">
+      <SelectionField id="sv2#area6#page17#enu9#sfld9" name="categoria" type="string">
+        <VRules>
+          <MandatoryValidationRule id="sv2#area6#page17#enu9#sfld9#mnd4" name="Mandatory1" errorMessage="Preencher Categoria"/>
+        </VRules>
+      </SelectionField>
+      <Field id="sv2#area6#page17#enu9#fld25" name="keyword" type="string" modifiable="true" contentType="text/plain">
+        <VRules/>
+      </Field>
+      <Link id="sv2#area6#page17#enu9#ln35" name="Procurar" to="sv2#area6#page17#inu6" type="normal" validate="true">
+        <LinkParameter id="sv2#area6#page17#enu9#ln35#par100" name="keyword_KeywordFilter" source="sv2#area6#page17#enu9#fld25" target="sv2#area6#page17#inu6#su14#acond4"/>
+        <LinkParameter id="sv2#area6#page17#enu9#ln35#par101" name="categoria_CategoriaFilter" source="sv2#area6#page17#enu9#sfld9" target="sv2#area6#page17#inu6#su14#acond5"/>
+      </Link>
+    </EntryUnit>
+    <MultiDataUnit id="sv2#area6#page17#mdu10" gr:x="0" gr:y="0" entity="ent2" name="Categorias">
+      <Link id="sv2#area6#page17#mdu10#ln36" name="Link12" to="sv2#area6#page17#enu9" type="transport" validate="true">
+        <LinkParameter id="sv2#area6#page17#mdu10#ln36#par102" name="descricao_categoria - Preselection" source="ent2#att10Array" target="sv2#area6#page17#enu9#sfld9_presel"/>
+        <LinkParameter id="sv2#area6#page17#mdu10#ln36#par103" name="descricao_categoria [label]" source="ent2#att10Array" target="sv2#area6#page17#enu9#sfld9_label"/>
+        <LinkParameter id="sv2#area6#page17#mdu10#ln36#par104" name="descricao_categoria [output]" source="ent2#att10Array" target="sv2#area6#page17#enu9#sfld9_output"/>
+      </Link>
+    </MultiDataUnit>
+    <IndexUnit id="sv2#area6#page17#inu6" name="Resultado" linkOrder="sv2#area6#page17#inu6#ln37" gr:x="26" gr:y="106" entity="ent1" displayAttributes="ent1#att3 ent1#att5 ent1#att7">
+      <Selector id="sv2#area6#page17#inu6#su14" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#area6#page17#inu6#su14#acond4" name="KeywordFilter" predicate="contains" booleanOperator="or" implied="true" attributes="ent1#att8"/>
+        <AttributesCondition id="sv2#area6#page17#inu6#su14#acond5" name="CategoriaFilter" predicate="eq" booleanOperator="or" implied="false" attributes="rel8#role15.ent2#att10"/>
+        <AttributesCondition id="sv2#area6#page17#inu6#su14#acond2" name="publicos" predicate="eq" booleanOperator="or" implied="false" attributes="ent1#att9" value="1"/>
+      </Selector>
+      <Link id="sv2#area6#page17#inu6#ln37" name="Visualizar" to="sv2#area6#page16#dau4" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area6#page17#enu9">
+          <layout:Link link="sv2#area6#page17#enu9#ln35"/>
+          <layout:Field field="sv2#area6#page17#enu9#sfld9"/>
+          <layout:Field field="sv2#area6#page17#enu9#fld25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area6#page17#inu6">
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att7"/>
+          <layout:Link link="sv2#area6#page17#inu6#ln37"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
