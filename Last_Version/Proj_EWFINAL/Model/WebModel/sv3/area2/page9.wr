@@ -1,0 +1,52 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="170" gr:y="260" id="sv3#area2#page9" name="Consulta de Documentos" landmark="true">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="4" id="sv3#area2#page9#inu1" name="Documentos Pessoais" entity="ent1" displayAttributes="ent1#att3 ent1#att4 ent1#att5 ent1#att7 ent1#att8 ent1#att9 rel8#role15.ent2#att10" linkOrder="sv3#area2#page9#inu1#ln11 sv3#area2#page9#inu1#ln15">
+      <Link id="sv3#area2#page9#inu1#ln11" name="Editar" to="sv3#area2#page8#enu3" type="normal" validate="true">
+        <LinkParameter id="sv3#area2#page9#inu1#ln11#par30" name="keywords_keywords" source="data[].ent1#att8" target="sv3#area2#page8#enu3#fld12_slot"/>
+        <LinkParameter id="sv3#area2#page9#inu1#ln11#par31" name="path_file_path_file" source="data[].ent1#att4" target="sv3#area2#page8#enu3#fld11_slot"/>
+        <LinkParameter id="sv3#area2#page9#inu1#ln11#par32" name="public_public" source="data[].ent1#att9" target="sv3#area2#page8#enu3#fld13_slot"/>
+        <LinkParameter id="sv3#area2#page9#inu1#ln11#par33" name="titulo_titulo" source="data[].ent1#att3" target="sv3#area2#page8#enu3#fld10_slot"/>
+        <LinkParameter id="sv3#area2#page9#inu1#ln11#par7" name="idDoc_PASSING" source="data[].ent1#att1" passing="true"/>
+      </Link>
+      <Link id="sv3#area2#page9#inu1#ln15" name="Apagar" to="sv3#area2#dlu1" automaticCoupling="true" type="normal" validate="true" newWindow="false"/>
+      <Selector id="sv3#area2#page9#inu1#su10" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#area2#page9#inu1#su10#acond3" name="AC_doc_user" predicate="eq" booleanOperator="or" implied="false" attributes="rel9#role17.userOID"/>
+      </Selector>
+    </IndexUnit>
+    <GetUnit gr:x="176" gr:y="0" id="sv3#area2#page9#gtu6" name="User" contextParameters="UserCtxParam">
+      <Link id="sv3#area2#page9#gtu6#ln45" name="Link45" to="sv3#area2#page9#inu1" type="transport" validate="true">
+        <LinkParameter id="sv3#area2#page9#gtu6#ln45#par85" name="UserCtxParam.oid_PASSING" source="sv3#area2#page9#gtu6.UserCtxParam" passing="true"/>
+        <LinkParameter id="sv3#area2#page9#gtu6#ln45#par86" name="UserCtxParam.oid_AC_doc_user" source="sv3#area2#page9#gtu6.UserCtxParam" target="sv3#area2#page9#inu1#su10#acond3"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv3#area2#page9#inu1">
+          <layout:Link link="sv3#area2#page9#inu1#ln11"/>
+          <layout:Link link="sv3#area2#page9#inu1#ln15"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att4"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att7"/>
+          <layout:Attribute attribute="ent1#att8"/>
+          <layout:Attribute attribute="ent1#att9"/>
+          <layout:Attribute attribute="rel8#role15.ent2#att10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

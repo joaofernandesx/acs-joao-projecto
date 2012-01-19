@@ -1,0 +1,59 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area2#page7" name="Criar Documento" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="184" gr:y="8" id="sv3#area2#page7#enu1" name="Novo Documento" fieldOrder="sv3#area2#page7#enu1#fld1 sv3#area2#page7#enu1#fld2 sv3#area2#page7#enu1#fld3 sv3#area2#page7#enu1#fld5 sv3#area2#page7#enu1#sfld1" linkOrder="sv3#area2#page7#enu1#ln10">
+      <Field id="sv3#area2#page7#enu1#fld1" name="titulo" type="string" modifiable="true"/>
+      <Field id="sv3#area2#page7#enu1#fld2" name="path_file" type="string" modifiable="true"/>
+      <Field id="sv3#area2#page7#enu1#fld3" name="keywords" type="string" modifiable="true"/>
+      <Field id="sv3#area2#page7#enu1#fld5" name="public" type="boolean" modifiable="true"/>
+      <SelectionField id="sv3#area2#page7#enu1#sfld1" name="categoria" type="string"/>
+      <Link id="sv3#area2#page7#enu1#ln10" name="Criar" to="sv3#area2#cru1" type="normal" validate="true">
+        <LinkParameter id="sv3#area2#page7#enu1#ln10#par60" name="keywords_keywords" source="sv3#area2#page7#enu1#fld3" target="sv3#area2#cru1.ent1#att8"/>
+        <LinkParameter id="sv3#area2#page7#enu1#ln10#par61" name="path_file_path_file" source="sv3#area2#page7#enu1#fld2" target="sv3#area2#cru1.ent1#att4"/>
+        <LinkParameter id="sv3#area2#page7#enu1#ln10#par62" name="public_public" source="sv3#area2#page7#enu1#fld5" target="sv3#area2#cru1.ent1#att9"/>
+        <LinkParameter id="sv3#area2#page7#enu1#ln10#par63" name="titulo_titulo" source="sv3#area2#page7#enu1#fld1" target="sv3#area2#cru1.ent1#att3"/>
+        <LinkParameter id="sv3#area2#page7#enu1#ln10#par64" name="categoria_CategoriaDoc.oid(DocumentoToCategoriaDoc)" source="sv3#area2#page7#enu1#sfld1" target="sv3#area2#cru1.rel8#role15.ent2#att2"/>
+        <LinkParameter id="sv3#area2#page7#enu1#ln10#par84" name="UserCtxParam.oid_PASSING_User.oid(DocumentoToUser)" sourceLinkParameter="sv3#area2#page7#gtu5#ln43#par83" target="sv3#area2#cru1.rel9#role17.userOID"/>
+      </Link>
+    </EntryUnit>
+    <MultiDataUnit gr:x="0" gr:y="4" id="sv3#area2#page7#mdu1" entity="ent2" name="Categorias">
+      <Link id="sv3#area2#page7#mdu1#ln4" name="Link4" to="sv3#area2#page7#enu1" type="transport" validate="true">
+        <LinkParameter id="sv3#area2#page7#mdu1#ln4#par12" name="descricao_categoria - Preselection" source="ent2#att10Array" target="sv3#area2#page7#enu1#sfld1_presel"/>
+        <LinkParameter id="sv3#area2#page7#mdu1#ln4#par13" name="descricao_categoria [label]" source="ent2#att10Array" target="sv3#area2#page7#enu1#sfld1_label"/>
+        <LinkParameter id="sv3#area2#page7#mdu1#ln4#par17" name="descricao_categoria [output]" source="ent2#att2Array" target="sv3#area2#page7#enu1#sfld1_output"/>
+      </Link>
+    </MultiDataUnit>
+    <GetUnit gr:x="336" gr:y="0" id="sv3#area2#page7#gtu5" name="User" contextParameters="UserCtxParam">
+      <Link id="sv3#area2#page7#gtu5#ln43" name="Link43" to="sv3#area2#page7#enu1" type="transport" validate="true">
+        <LinkParameter id="sv3#area2#page7#gtu5#ln43#par83" name="UserCtxParam.oid_PASSING" source="sv3#area2#page7#gtu5.UserCtxParam" passing="true"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv3#area2#page7#enu1">
+          <layout:Field field="sv3#area2#page7#enu1#fld1"/>
+          <layout:Field field="sv3#area2#page7#enu1#fld2"/>
+          <layout:Field field="sv3#area2#page7#enu1#fld3"/>
+          <layout:Field field="sv3#area2#page7#enu1#fld5"/>
+          <layout:Field field="sv3#area2#page7#enu1#sfld1"/>
+          <layout:Link link="sv3#area2#page7#enu1#ln10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv3#area2#page7#mdu1"/>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

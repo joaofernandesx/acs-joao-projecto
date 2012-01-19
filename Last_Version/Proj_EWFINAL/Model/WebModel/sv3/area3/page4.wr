@@ -1,0 +1,52 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv3#area3#page4" name="NovoUtilizador" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="114" gr:y="4" id="sv3#area3#page4#enu2" name="Novo Utilizador" linkOrder="sv3#area3#page4#enu2#ln3 sv3#area3#page4#enu2#ln22">
+      <Field id="sv3#area3#page4#enu2#fld6" name="userName" type="string" modifiable="true"/>
+      <Field id="sv3#area3#page4#enu2#fld7" name="password" type="password" modifiable="true"/>
+      <Field id="sv3#area3#page4#enu2#fld8" name="email" type="string" modifiable="true"/>
+      <Link id="sv3#area3#page4#enu2#ln3" name="Criar" to="sv3#area3#cru2" type="normal" validate="true">
+        <LinkParameter id="sv3#area3#page4#enu2#ln3#par9" name="email_email" source="sv3#area3#page4#enu2#fld8" target="sv3#area3#cru2.email"/>
+        <LinkParameter id="sv3#area3#page4#enu2#ln3#par10" name="password_password" source="sv3#area3#page4#enu2#fld7" target="sv3#area3#cru2.password"/>
+        <LinkParameter id="sv3#area3#page4#enu2#ln3#par11" name="userName_userName" source="sv3#area3#page4#enu2#fld6" target="sv3#area3#cru2.userName"/>
+        <LinkParameter id="sv3#area3#page4#enu2#ln3#par26" name="grupo_Group.oid(defaultGroup)" source="sv3#area3#page4#enu2#sfld3" target="sv3#area3#cru2.User2DefaultGroup.groupOID"/>
+      </Link>
+      <Link id="sv3#area3#page4#enu2#ln22" name="Cancelar" to="sv3#area3#page6" automaticCoupling="true" type="normal" validate="true"/>
+      <SelectionField id="sv3#area3#page4#enu2#sfld3" name="grupo" type="string"/>
+    </EntryUnit>
+    <MultiDataUnit gr:x="0" gr:y="0" id="sv3#area3#page4#mdu5" name="Grupos" entity="Group">
+      <Link id="sv3#area3#page4#mdu5#ln5" name="Link5" to="sv3#area3#page4#enu2" type="transport" validate="true">
+        <LinkParameter id="sv3#area3#page4#mdu5#ln5#par23" name="oid_grupo - Preselection" source="groupNameArray" target="sv3#area3#page4#enu2#sfld3_presel"/>
+        <LinkParameter id="sv3#area3#page4#mdu5#ln5#par24" name="oid_grupo [label]" source="groupNameArray" target="sv3#area3#page4#enu2#sfld3_label"/>
+        <LinkParameter id="sv3#area3#page4#mdu5#ln5#par25" name="oid_grupo [output]" source="groupOIDArray" target="sv3#area3#page4#enu2#sfld3_output"/>
+      </Link>
+    </MultiDataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv3#area3#page4#enu2">
+          <layout:Link link="sv3#area3#page4#enu2#ln3"/>
+          <layout:Link link="sv3#area3#page4#enu2#ln22"/>
+          <layout:Field field="sv3#area3#page4#enu2#fld6"/>
+          <layout:Field field="sv3#area3#page4#enu2#fld7"/>
+          <layout:Field field="sv3#area3#page4#enu2#fld8"/>
+          <layout:Field field="sv3#area3#page4#enu2#sfld3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv3#area3#page4#mdu5"/>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

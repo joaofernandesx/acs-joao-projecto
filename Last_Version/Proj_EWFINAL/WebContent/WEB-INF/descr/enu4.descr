@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Descriptor service="com.webratio.units.content.rtx.EntryUnitService" name="search">
+  <FormFields>
+    <Field id="fld3" name="palavra" type="string" subType="" localized="false"></Field>
+    <SelectionField id="sfld4" name="categoria" type="text" subType="" value="" localized="false" splitOutput="false">
+      <Slot id="sfld4_label" label="true" output="false"/>
+      <Slot id="sfld4_output" label="false" output="true"/>
+    </SelectionField>
+  </FormFields>
+  <WRValidation links="ln6">
+    <CollectionValidationRule service="com.webratio.units.validation.CollectionValidationRuleService" elementId="sfld4" id="clc4" name="Collection4" condition="">
+      <Predicate>in</Predicate>
+      <Values></Values>
+      <IgnoreCase>false</IgnoreCase>
+      <Query entity="ent2">
+        <Input id="q1" param="clc4_value" type="string" implied="false" expandStyle="in" attribute="att10"/>
+        <Count>select count(*) from CategoriaDoc a_categoriaDoc
+          <Where defaultPolicy="empty" allImplied="false">(({[q1]safe_cast(a_categoriaDoc.descricao) in(?)}))</Where>
+        </Count>
+      </Query>
+    </CollectionValidationRule>
+  </WRValidation>
+</Descriptor>
+ 

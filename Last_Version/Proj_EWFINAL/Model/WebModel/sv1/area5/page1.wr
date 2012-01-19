@@ -1,0 +1,46 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area5#page1" name="Login" gr:x="0" gr:y="0">
+  <ContentUnits>
+    <EntryUnit id="sv1#area5#page1#enu8" name="Login" linkOrder="sv1#area5#page1#enu8#ln1" gr:x="0" gr:y="0">
+      <Field id="sv1#area5#page1#enu8#fld24" name="Username" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area5#page1#enu8#fld24#mnd3" name="usern" errorMessage="Introduza o seu username"/>
+        </VRules>
+      </Field>
+      <Field id="sv1#area5#page1#enu8#fld27" name="Password" type="password" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#area5#page1#enu8#fld27#mnd6" name="pass" errorMessage="Introduza a password"/>
+        </VRules>
+      </Field>
+      <Link id="sv1#area5#page1#enu8#ln1" name="Entrar" to="sv1#area5#lgu1" type="normal" validate="true">
+        <LinkParameter id="sv1#area5#page1#enu8#ln1#par1" name="Username_Username" source="sv1#area5#page1#enu8#fld24" target="sv1#area5#lgu1.username"/>
+        <LinkParameter id="sv1#area5#page1#enu8#ln1#par2" name="Password_Password" source="sv1#area5#page1#enu8#fld27" target="sv1#area5#lgu1.password"/>
+        <LinkParameter id="sv1#area5#page1#enu8#ln1#par3" name="Username_Remember Credentials (cookies)" source="sv1#area5#page1#enu8#fld24" target="sv1#area5#lgu1.rememberCredentials"/>
+        <LinkParameter id="sv1#area5#page1#enu8#ln1#par4" name="Password_PASSING" source="sv1#area5#page1#enu8#fld27" passing="true"/>
+        <LinkParameter id="sv1#area5#page1#enu8#ln1#par5" name="Username_PASSING" source="sv1#area5#page1#enu8#fld24" passing="true"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#area5#page1#enu8">
+          <layout:Field field="sv1#area5#page1#enu8#fld24"/>
+          <layout:Field field="sv1#area5#page1#enu8#fld27"/>
+          <layout:Link link="sv1#area5#page1#enu8#ln1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
