@@ -1,0 +1,56 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="10" gr:y="140" id="sv3#area3#page5" name="EditarUtilizador" landmark="false">
+  <ContentUnits>
+    <EntryUnit gr:x="96" gr:y="6" id="sv3#area3#page5#enu6" name="Editar Utilizador" linkOrder="sv3#area3#page5#enu6#ln20 sv3#area3#page5#enu6#ln21">
+      <Field id="sv3#area3#page5#enu6#fld16" name="userName" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv3#area3#page5#enu6#fld17" name="password" type="password" modifiable="true" preloaded="true"/>
+      <Field id="sv3#area3#page5#enu6#fld18" name="email" type="string" modifiable="true" preloaded="true"/>
+      <Link id="sv3#area3#page5#enu6#ln20" name="Cancelar" to="sv3#area3#page6" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="74,69,-106,103"/>
+      <Link id="sv3#area3#page5#enu6#ln21" name="Gravar" to="sv3#area3#mfu2" type="normal" validate="true">
+        <LinkParameter id="sv3#area3#page5#enu6#ln21#par46" name="email_email" source="sv3#area3#page5#enu6#fld18" target="sv3#area3#mfu2.email"/>
+        <LinkParameter id="sv3#area3#page5#enu6#ln21#par47" name="oid_PASSING_KeyCondition1 [oid]" sourceLinkParameter="sv3#area3#page6#inu2#ln18#par45" target="sv3#area3#mfu2#su1#kcond1.userOID"/>
+        <LinkParameter id="sv3#area3#page5#enu6#ln21#par48" name="password_password" source="sv3#area3#page5#enu6#fld17" target="sv3#area3#mfu2.password"/>
+        <LinkParameter id="sv3#area3#page5#enu6#ln21#par49" name="userName_userName" source="sv3#area3#page5#enu6#fld16" target="sv3#area3#mfu2.userName"/>
+        <LinkParameter id="sv3#area3#page5#enu6#ln21#par22" name="Grupo_Group.oid(defaultGroup)" source="sv3#area3#page5#enu6#sfld2" target="sv3#area3#mfu2.User2DefaultGroup.groupOID"/>
+      </Link>
+      <SelectionField id="sv3#area3#page5#enu6#sfld2" name="Grupo" type="string">
+        <VRules>
+          <MandatoryValidationRule id="sv3#area3#page5#enu6#sfld2#mnd2" name="Regra" errorMessage="Introduzir Grupo V&#225;lido !"/>
+        </VRules>
+      </SelectionField>
+    </EntryUnit>
+    <MultiDataUnit gr:x="0" gr:y="0" id="sv3#area3#page5#mdu2" name="Grupos" entity="Group">
+      <Link id="sv3#area3#page5#mdu2#ln23" name="Link23" to="sv3#area3#page5#enu6" type="transport" validate="true">
+        <LinkParameter id="sv3#area3#page5#mdu2#ln23#par50" name="groupName_Grupo - Preselection" source="groupNameArray" target="sv3#area3#page5#enu6#sfld2_presel"/>
+        <LinkParameter id="sv3#area3#page5#mdu2#ln23#par51" name="groupName_Grupo [label]" source="groupNameArray" target="sv3#area3#page5#enu6#sfld2_label"/>
+        <LinkParameter id="sv3#area3#page5#mdu2#ln23#par52" name="groupName_Grupo [output]" source="groupOIDArray" target="sv3#area3#page5#enu6#sfld2_output"/>
+        <LinkParameter id="sv3#area3#page5#mdu2#ln23#par21" name="groupName_PASSING" source="groupNameArray" passing="true"/>
+      </Link>
+    </MultiDataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv3#area3#page5#enu6">
+          <layout:Link link="sv3#area3#page5#enu6#ln20"/>
+          <layout:Link link="sv3#area3#page5#enu6#ln21"/>
+          <layout:Field field="sv3#area3#page5#enu6#fld16"/>
+          <layout:Field field="sv3#area3#page5#enu6#fld17"/>
+          <layout:Field field="sv3#area3#page5#enu6#fld18"/>
+          <layout:Field field="sv3#area3#page5#enu6#sfld2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,0 +1,44 @@
+[22 Dez 2011 16:08:28] DEBUG Executing SQL script
+[22 Dez 2011 16:08:28] INFO ================================================================================
+[22 Dez 2011 16:08:28] INFO outputPath= '/Users/joaofernandesx/Documents/WebRatio_WorkSpace/Proj_EW/.Temp~/UpdateSQL.xml'
+[22 Dez 2011 16:08:28] INFO onError= 'continue'
+[22 Dez 2011 16:08:28] INFO statementSeparator= ';'
+[22 Dez 2011 16:08:28] INFO derby.system.home= '/Users/joaofernandesx/Documents/WebRatio_WorkSpace/.metadata/.plugins/com.webratio.commons.db/derby'
+[22 Dez 2011 16:08:28] INFO password= ''
+[22 Dez 2011 16:08:28] INFO url= 'jdbc:mysql://localhost/db_engweb'
+[22 Dez 2011 16:08:28] INFO username= 'root'
+[22 Dez 2011 16:08:28] INFO autoCommit= 'false'
+[22 Dez 2011 16:08:28] INFO outputLogPath= '/Users/joaofernandesx/Documents/WebRatio_WorkSpace/Proj_EW/.Temp~/UpdateSQL.xml.log'
+[22 Dez 2011 16:08:28] INFO driverClass= 'com.mysql.jdbc.Driver'
+[22 Dez 2011 16:08:28] INFO encoding= ''
+[22 Dez 2011 16:08:28] INFO eventSocketPort= '50445'
+[22 Dez 2011 16:08:28] INFO sqlScript= '/Users/joaofernandesx/Documents/WebRatio_WorkSpace/Proj_EW/.Temp~/UpdateSQL.sql'
+[22 Dez 2011 16:08:28] INFO ================================================================================
+[22 Dez 2011 16:08:28] INFO Connecting to the Database...
+[22 Dez 2011 16:08:28] INFO Database connection estabilished
+[22 Dez 2011 16:08:28] INFO transaction isolation: 4
+[22 Dez 2011 16:08:28] DEBUG ================================================================================
+[22 Dez 2011 16:08:28] DEBUG Executing SQL script file: /Users/joaofernandesx/Documents/WebRatio_WorkSpace/Proj_EW/.Temp~/UpdateSQL.sql
+[22 Dez 2011 16:08:28] DEBUG Executing statement:  create table `group` ( `oid`  integer  not null, `groupname`  varchar(255), primary key (`oid`) )
+[22 Dez 2011 16:08:28] DEBUG Executing statement:    create table `module` ( `oid`  integer  not null, `moduleid`  varchar(255), `modulename`  varchar(255), primary key (`oid`) )
+[22 Dez 2011 16:08:28] DEBUG Executing statement:    create table `user` ( `oid`  integer  not null, `username`  varchar(255), `password`  varchar(255), `email`  varchar(255), primary key (`oid`) )
+[22 Dez 2011 16:08:28] DEBUG Executing statement:    create table `documento` ( `iddoc`  integer  not null, `titulo`  varchar(255), `path_file`  varchar(255), `datacriacao`  date, `datamodificacao`  date, `keywords`  varchar(255), `public`  bit, primary key (`iddoc`) )
+[22 Dez 2011 16:08:29] DEBUG Executing statement:    create table `categoriadoc` ( `oid`  integer  not null, `descricao`  varchar(255), primary key (`oid`) )
+[22 Dez 2011 16:08:29] DEBUG Executing statement:    alter table `group`  add column  `module_oid`  integer
+[22 Dez 2011 16:08:29] DEBUG Executing statement:  alter table `group`   add index fk_group_module (`module_oid`), add constraint fk_group_module foreign key (`module_oid`) references `module` (`oid`)
+[22 Dez 2011 16:08:29] DEBUG Executing statement:    create table `group_module` ( `group_oid`  integer not null, `module_oid`  integer not null, primary key (`group_oid`, `module_oid`) )
+[22 Dez 2011 16:08:29] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_group (`group_oid`), add constraint fk_group_module_group foreign key (`group_oid`) references `group` (`oid`)
+[22 Dez 2011 16:08:29] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_module (`module_oid`), add constraint fk_group_module_module foreign key (`module_oid`) references `module` (`oid`)
+[22 Dez 2011 16:08:29] DEBUG Executing statement:    alter table `user`  add column  `group_oid`  integer
+[22 Dez 2011 16:08:30] DEBUG Executing statement:  alter table `user`   add index fk_user_group (`group_oid`), add constraint fk_user_group foreign key (`group_oid`) references `group` (`oid`)
+[22 Dez 2011 16:08:30] DEBUG Executing statement:    create table `user_group` ( `user_oid`  integer not null, `group_oid`  integer not null, primary key (`user_oid`, `group_oid`) )
+[22 Dez 2011 16:08:30] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_user (`user_oid`), add constraint fk_user_group_user foreign key (`user_oid`) references `user` (`oid`)
+[22 Dez 2011 16:08:30] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_group (`group_oid`), add constraint fk_user_group_group foreign key (`group_oid`) references `group` (`oid`)
+[22 Dez 2011 16:08:30] DEBUG Executing statement:    alter table `documento`  add column  `categoriadoc_oid`  integer
+[22 Dez 2011 16:08:30] DEBUG Executing statement:  alter table `documento`   add index fk_documento_categoriadoc (`categoriadoc_oid`), add constraint fk_documento_categoriadoc foreign key (`categoriadoc_oid`) references `categoriadoc` (`oid`)
+[22 Dez 2011 16:08:30] DEBUG Executing statement:    alter table `documento`  add column  `user_oid`  integer
+[22 Dez 2011 16:08:30] DEBUG Executing statement:  alter table `documento`   add index fk_documento_user (`user_oid`), add constraint fk_documento_user foreign key (`user_oid`) references `user` (`oid`)
+[22 Dez 2011 16:08:30] DEBUG ================================================================================
+[22 Dez 2011 16:08:30] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[22 Dez 2011 16:08:30] INFO Database connection closed
+[22 Dez 2011 16:08:30] DEBUG Total time: 2605 milliseconds

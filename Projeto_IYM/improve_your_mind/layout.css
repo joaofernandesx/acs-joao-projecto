@@ -1,0 +1,208 @@
+/* remove default padding and margins */
+* {
+margin: 0 0 0 0;
+padding: 0 0 0 0
+}
+
+/* set default colors fore and background */
+body {
+padding: 0 5%;
+color: #000000;
+background: #FFFFFF;
+font-family: arial, verdana, serif;
+font-style: normal;
+font-weight: normal
+}
+
+/* set size of links division */
+#links {
+width: 100%;
+background: #4b75b3;
+float: left
+}
+
+/* set size of heading division container */
+#heading {
+width: 100%;
+float: left
+cursor: hand;
+}
+
+/* set size of heading-left division and position */
+#heading-left {
+width: 65%;
+float: left;
+}
+
+/* set size of heading-right division and position */
+#heading-right {
+width: 35%;
+float: left;
+
+}
+
+/* set size of main division */
+#main {
+
+width: 100%;
+float: left
+}
+
+
+#main-left {
+width: 20%;
+float: left;
+margin: 0 0 0 4%
+
+}
+
+#main-middle {
+width: 70%;
+float: left;
+margin: 0% 4% 0 0%
+}
+
+#main-right {
+
+width: 20%;
+float:right;
+margin: 0 4% 0 0
+
+}
+
+#main-middle img{
+margin: 5px 5px 5px 5px
+}
+
+/*Liquify images */
+img {
+max-width: 100%
+}
+
+#heading-left img{
+padding: 2% 0 2% 3%
+}
+
+/* set size of footer division and add back color */
+#footer {
+width: 100%;
+background: #4b75b3;
+float: left
+}
+
+
+/* set font properties of links */
+#links p {
+font-size: 12pt;
+font-weight: bold;
+float: left;
+padding: .5% 1%
+}
+
+/* set color of links and remove underline */
+
+#links a {
+color: #efefef;
+text-decoration: none
+}
+
+/* set hover or roll over color of links */
+#links a:hover {
+color: #ffe700;
+text-decoration: none
+}
+
+
+
+/* add font settings for paragraph tag in heading-right division */
+
+#heading-right p {
+font-size: 14px;
+float: right;
+padding: 25% 10% 15% 0%
+}
+
+/* set font properties of h1 tag within main-middle div */
+
+#main-middle h1 {
+font-size: 20	px;
+text-align: center;
+padding: 2% 0
+}
+
+/* set font properties of h2 tag within main-middle div */
+#main-middle h2 {
+font-size: 16px;
+text-align: center;
+padding: 2% 0
+}
+
+#titulo {
+width: 100%;
+float: left;
+margin: 0 0% 0 0%
+}
+
+#lastpubs {
+width: 100%;
+float: left;
+margin: 0 0% 0 0%
+}
+#lastpubs h2 {
+font-size: 20px;
+text-align: center;
+color: #efefef;
+background: #4b75b3;
+padding: 0.6% 0
+}
+
+#titulo h2 {
+font-size: 20px;
+text-align: center;
+color: #efefef;
+background: #4b75b3;
+padding: 0.6% 0
+}
+
+#titulo2 {
+width: 100%;
+float: left;
+margin: 0 0% 0 0%
+}
+#titulo2 h2 {
+font-size: 16px;
+text-align: center;
+color: #efefef;
+background: #4b75b3;
+padding: 0.6% 0
+}
+
+
+/* set font properties of paragraph tag within main-middle div */
+#main-middle p {
+font-size: 16px;
+text-indent: 16px;
+text-align: left;
+padding: 2% 0
+}
+
+
+#main-right h2, #main-left h2 {
+font-size: 16px;
+text-align: center;
+padding: 2% 0
+}
+
+#main-left p, #main-right p {
+font-size: 14px;
+text-align: center;
+padding: 2% 0
+}
+
+/* set font properties of address tag within footer div */
+#footer address {
+font-size: 12px;
+text-align: center;
+padding: .5% 0
+}
+

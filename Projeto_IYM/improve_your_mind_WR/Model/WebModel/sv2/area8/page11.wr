@@ -1,0 +1,56 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#area8#page11" name="Editar Documento" landmark="false" gr:x="4" gr:y="138">
+  <ContentUnits>
+    <EntryUnit id="sv2#area8#page11#enu11" name="Editar Documento" linkOrder="sv2#area8#page11#enu11#ln7 sv2#area8#page11#enu11#ln24" gr:x="0" gr:y="130">
+      <Field id="sv2#area8#page11#enu11#fld28" name="titulo" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv2#area8#page11#enu11#fld29" name="path_file" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv2#area8#page11#enu11#fld30" name="keywords" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv2#area8#page11#enu11#fld31" name="public" type="boolean" modifiable="true" preloaded="true"/>
+      <Link id="sv2#area8#page11#enu11#ln7" name="Gravar" to="sv2#area8#mfu4" type="normal" validate="true">
+        <LinkParameter id="sv2#area8#page11#enu11#ln7#par27" name="keywords_keywords" source="sv2#area8#page11#enu11#fld30" target="sv2#area8#mfu4.ent1#att8"/>
+        <LinkParameter id="sv2#area8#page11#enu11#ln7#par28" name="path_file_path_file" source="sv2#area8#page11#enu11#fld29" target="sv2#area8#mfu4.ent1#att4"/>
+        <LinkParameter id="sv2#area8#page11#enu11#ln7#par29" name="public_public" source="sv2#area8#page11#enu11#fld31" target="sv2#area8#mfu4.ent1#att9"/>
+        <LinkParameter id="sv2#area8#page11#enu11#ln7#par38" name="titulo_titulo" source="sv2#area8#page11#enu11#fld28" target="sv2#area8#mfu4.ent1#att3"/>
+        <LinkParameter id="sv2#area8#page11#enu11#ln7#par39" name="idDoc_PASSING_KeyCondition7 [idDoc]" sourceLinkParameter="sv2#area8#page13#inu4#ln28#par76" target="sv2#area8#mfu4#su4#kcond4.ent1#att1"/>
+        <LinkParameter id="sv2#area8#page11#enu11#ln7#par40" name="categoria_CategoriaDoc.oid(DocumentoToCategoriaDoc)" source="sv2#area8#page11#enu11#sfld8" target="sv2#area8#mfu4.rel8#role15.ent2#att2"/>
+      </Link>
+      <Link id="sv2#area8#page11#enu11#ln24" name="Cancelar" to="sv2#area8#page13" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="36,76,-142,84;74,80,-104,88"/>
+      <SelectionField id="sv2#area8#page11#enu11#sfld8" name="categoria" type="string"/>
+    </EntryUnit>
+    <MultiDataUnit id="sv2#area8#page11#mdu4" gr:x="20" gr:y="0" entity="ent2" name="Categorias">
+      <Link id="sv2#area8#page11#mdu4#ln25" name="Link19" to="sv2#area8#page11#enu11" type="transport" validate="true">
+        <LinkParameter id="sv2#area8#page11#mdu4#ln25#par41" name="descricao_categoria - Preselection" source="ent2#att10Array" target="sv2#area8#page11#enu11#sfld8_presel"/>
+        <LinkParameter id="sv2#area8#page11#mdu4#ln25#par53" name="descricao_categoria [label]" source="ent2#att10Array" target="sv2#area8#page11#enu11#sfld8_label"/>
+        <LinkParameter id="sv2#area8#page11#mdu4#ln25#par54" name="oid_categoria [output]" source="ent2#att2Array" target="sv2#area8#page11#enu11#sfld8_output"/>
+      </Link>
+    </MultiDataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area8#page11#enu11">
+          <layout:Link link="sv2#area8#page11#enu11#ln7"/>
+          <layout:Link link="sv2#area8#page11#enu11#ln24"/>
+          <layout:Field field="sv2#area8#page11#enu11#fld28"/>
+          <layout:Field field="sv2#area8#page11#enu11#fld29"/>
+          <layout:Field field="sv2#area8#page11#enu11#fld30"/>
+          <layout:Field field="sv2#area8#page11#enu11#fld31"/>
+          <layout:Field field="sv2#area8#page11#enu11#sfld8"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area8#page11#mdu4"/>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

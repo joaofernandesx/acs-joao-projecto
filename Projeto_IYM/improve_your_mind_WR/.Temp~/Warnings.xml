@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Warnings> 
+  <Warning xpath="id('sv1#area5#page1#enu8#ln1#par4')" rootXPath="id('sv1')" key="UNUSED_PASSING_PARAMETER" label="Password_PASSING"> 
+    <Message>The passing parameter 'Password_PASSING' is declared but never used</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.RemoveElementResolutionGenerator">Remove the invalid link parameter 'sv1#area5#page1#enu8#ln1#par4'</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv1#area5#page1#enu8#ln1#par5')" rootXPath="id('sv1')" key="UNUSED_PASSING_PARAMETER" label="Username_PASSING"> 
+    <Message>The passing parameter 'Username_PASSING' is declared but never used</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.RemoveElementResolutionGenerator">Remove the invalid link parameter 'sv1#area5#page1#enu8#ln1#par5'</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv1#area5#lgu1')" rootXPath="id('sv1')" error="false" label="Login" key="NO_OUTGOING_OK_LINKS"> 
+    <Message>No outgoing OK link(s) for the operation unit 'Login'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv1#area5#page14#enu13#fld40')" rootXPath="id('sv1')" key="HIDDEN_FIELD_MODIFIABLE" label="IdGrupo"> 
+    <Message>The hidden field 'IdGrupo' shouldn't be modifiable</Message>  
+    <Resolution message="Set the field to not modifiable" class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" attribute="modifiable" value="false">Set the field to not modifiable</Resolution> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv1#area7#page19#mdu11')" rootXPath="id('sv1')" key="NO_DISPLAY_ATTRIBUTES" label="Categorias"> 
+    <Message>No attributes to display are specified for the unit 'Categorias'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv1#area7#page19#mdu11')" rootXPath="id('sv1')" key="" label="Categorias"> 
+    <Message>Sorting attribute are unspecified for the unit 'Categorias'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv1#area7#page19#inu7')" rootXPath="id('sv1')" key="" label="Resultado"> 
+    <Message>Sorting attribute are unspecified for the unit 'Resultado'</Message> 
+  </Warning> 
+</Warnings>

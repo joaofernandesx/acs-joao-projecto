@@ -1,0 +1,5 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="320" gr:y="310" id="sv3#area3#page3" name="Error" linkOrder="sv3#area3#page3#ln8">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv3#area3#page3#mssu1" name="Mensagem">
+      <Message xml:space="preserve">Opera&#231;&#227;o n&#227;o concluida com sucesso !
+</Message>    </MultiMessageUnit>  </ContentUnits>  <layout:Grid>    <layout:Row>      <layout:Cell>        <layout:Unit unitId="sv3#area3#page3#mssu1"/>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid>  <Link id="sv3#area3#page3#ln8" name="Voltar" to="sv3#area3#page6" automaticCoupling="true" type="normal" validate="true"/></Page>
